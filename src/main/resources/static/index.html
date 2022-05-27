@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blueprints</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/apiconnect.js"></script>
+
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+</head>
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-start">
+                <div class="col">
+                    <h1 class="word-header">Seguro giros</h1>
+                </div>
+                <div class="col">
+                    <h4 class="word-header">Parametros de configuración</h4>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <div class="container w-50">
+        <div class="row">
+            <div class="col">
+                <h3>DB SID: </h3>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control"id="DBSID">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>DB IP: </h3>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="DBIP">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>DB port: </h3>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" id="DBPort">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>DB user name: </h3>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="DBUserName">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>DB password: </h3>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <input type="password" class="form-control DBPassword" id="DBPassword">
+                    <span class="fa fa-fw fa-eye password-icon show-password"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>Partition count: </h3>
+            </div>
+            <div class="col">
+
+                <input type="number" class="form-control" id="PartitionCount">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>Min connections per partition: </h3>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" id="MinConnectionsPerPartition">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>Max connections per partition: </h3>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" id="MaxConnectionsPerPartition">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>PDF path: </h3>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="PDFPath">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <h3>Email address: </h3>
+            </div>
+            <div class="col">
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="EmailAddress">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container w-25">
+        <div class="row">
+            <div class="col">
+                <button  type="button"  class="btn btn-primary" onclick="app.getProperties()">Consultar</button>
+            </div>
+            <div class="col">
+                <button  type="button"  class="btn btn-primary" onclick="app.putProperties()">Modificar</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
